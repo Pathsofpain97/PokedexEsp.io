@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+#loading-div {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    background-color: white;
+}
+
+.loading-ball {
+    height: 60px;
+    filter: brightness(80%);
+    animation: rotatePokeBall ease-in-out 3s infinite;
+}
+
+@keyframes rotatePokeBall {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
