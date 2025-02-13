@@ -35,7 +35,7 @@ const Header = ({ setSearchTerm, language }) => {
               onChange={handleSearch}
             />
             <InputGroup.Text id="start-search-button">
-              <IoMdSearch className="start-search-icon" />
+              <IoMdSearch className="start-search-icon mb-1" />
             </InputGroup.Text>
           </InputGroup>
         </div>

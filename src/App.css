@@ -45,7 +45,7 @@
 
 .back-to-top-button {
     background-color: rgb(247, 247, 247);
-    filter: drop-shadow(9px 16px 3px rgba(83, 83, 83, 0.667));
+    filter: drop-shadow(9px 16px 3px rgba(130, 130, 130, 0.667));
     position: fixed;
     bottom: 20px;
     left: 20px;
