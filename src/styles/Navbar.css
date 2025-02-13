@@ -46,7 +46,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   transition: opacity 0.3s ease, box-shadow 0.3s ease; 
 }
 
@@ -95,6 +94,7 @@
   #search-bar-container {
     margin: 20px 0; /* Reduce el margen superior e inferior */
     padding: 10px; /* Reduce el padding */
+    gap: 0; /* Elimina el espacio entre los elementos */
   }
 
   #search-input {
@@ -104,5 +104,11 @@
 
   #start-search-button {
     height: 30px; /* Reduce la altura del botón */
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier padding */
+  }
+
+  .logo-container {
+    margin-bottom: 10px; /* Ajusta el margen inferior del logo */
   }
 }
