@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"; // ✅ Importamos PropTypes
+import PropTypes from "prop-types"; 
 import { Navbar, Container, Form, InputGroup } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { IoMdSearch } from "react-icons/io";
@@ -38,6 +38,9 @@ const Header = ({ setSearchTerm, language }) => {
               <IoMdSearch className="start-search-icon" />
             </InputGroup.Text>
           </InputGroup>
+          <div id="new-search-button">
+            <IoMdSearch className="start-search-icon" />
+          </div>
         </div>
       </Container>
     </Navbar>

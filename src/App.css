@@ -9,6 +9,8 @@
 
 .logo {
     filter: drop-shadow(9px 16px 3px rgba(163, 163, 163, 0.667));
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .language-toggle-button {
