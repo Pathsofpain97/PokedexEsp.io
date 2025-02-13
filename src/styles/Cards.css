@@ -1,30 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Contenedor principal que replica el estilo de pokemon-render-result-container */
+/* Contenedor principal */
 .pokemon-render-result-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 10px;
   flex-wrap: wrap;
+  gap: 20px; /* Espacio entre tarjetas */
+  padding: 30px 10px;
+  justify-content: center; /* Centra las tarjetas */
+}
+
+/* Columnas de Pokémon */
+.pokemon-col {
+  flex: 1 1 250px; /* Tamaño flexible */
+  max-width: 250px; /* Ancho máximo */
 }
 
 /* Estilo de las cartas de Pokémon */
 .pokemon-card {
-  width: 250px;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   background-color: #ffffff;
-  transition: transform 0.3s ease;
-  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .pokemon-card:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-/* Contenedor de la imagen del Pokémon */
+
 .pokemon-img-container {
   display: flex;
   justify-content: center;
@@ -35,10 +42,10 @@
   max-width: 9rem;
   max-height: 9rem;
   object-fit: contain;
-	filter: drop-shadow(9px 16px 3px rgba(148, 148, 148, 0.667));
+  filter: drop-shadow(9px 16px 3px rgba(148, 148, 148, 0.667));
 }
 
-/* ID del Pokémon */
+
 .pokemon-id {
   text-align: center;
   font-size: 1rem;
@@ -46,21 +53,21 @@
   font-weight: bold;
 }
 
-/* Nombre del Pokémon */
+
 .pokemon-name {
   color: #011030 !important;
   text-align: center !important;
-  font-size: 1.1rem !important;
+  font-size: 0.8rem !important;
   font-weight: bold !important;
-  margin: 7px !important;
   font-family: 'Outfit', sans-serif !important;
 }
 
-/* Tipos de Pokémon debajo del nombre */
+
 .pokemon-types {
   display: flex;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap; 
 }
 
 .pokemon-type {
@@ -73,7 +80,29 @@
   font-family: 'Outfit', sans-serif !important;
 }
 
-/* Tipos de Pokémon con colores específicos */
+
+@media (max-width: 768px) {
+  .pokemon-col {
+    flex: 1 1 100%; /* En pantallas pequeñas, las tarjetas ocupan todo el ancho */
+    max-width: 100%; /* Asegura que no haya restricción de ancho */
+  }
+
+  .pokemon-card {
+    max-width: 300px; /* Limita el ancho máximo en móviles */
+    margin: 0 auto; /* Centra las tarjetas en móviles */
+  }
+
+  .pokemon-image {
+    max-width: 7rem; /* Reduce el tamaño de la imagen en móviles */
+    max-height: 7rem;
+  }
+
+  .pokemon-types {
+    gap: 5px; /* Reduce el espacio entre los tipos en móviles */
+  }
+}
+
+/* Tipos de Pokémon con colores específicos (sin cambios) */
 .pokemon-type.normal {
   background-color: #BCBCAC;
   color: #000;

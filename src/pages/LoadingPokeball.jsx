@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom';
 import '../styles/Loading.css'; 
 
 import pokeball from '../assets/pokeball-icon.png'; 
@@ -11,7 +11,7 @@ const LoadingPokeball = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-      navigate('/Home'); // Cambia a la ruta que desees
+      navigate('/Home');
     }, 6000); 
 
     return () => clearTimeout(timer);

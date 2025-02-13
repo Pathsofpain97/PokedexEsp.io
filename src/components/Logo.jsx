@@ -1,4 +1,5 @@
 import logo from '../assets/logo.png'; 
+import "../App.css";
 
 export const Logo = () => {
 
