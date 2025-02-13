@@ -59,6 +59,7 @@
   border-radius: 10px 0 0 10px; 
   border: 1px solid #ddd; 
   padding: 10px;
+  font-size: 1rem;
   flex-grow: 1;
   transition: border-color 0.3s ease; 
 }
@@ -79,6 +80,7 @@
   .logo-container {
     margin-right: 0; /* Elimina el margen derecho */
     text-align: center; /* Centra el logo */
+    margin-bottom: 10px;
   }
 
   #start-search-button {
@@ -97,9 +99,11 @@
 
   #search-input {
     padding: 8px; /* Reduce el padding del input */
+    font-size: 0.8rem;
   }
 
   #start-search-button {
-    height: 35px; /* Reduce la altura del botón */
+    height: 30px; /* Reduce la altura del botón */
+    margin-bottom: 5px;
   }
 }
