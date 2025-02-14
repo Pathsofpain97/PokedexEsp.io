@@ -201,7 +201,7 @@
   }
 
   .pokemon-evolution-chain img {
-    max-width: 60px; /* Reducir el tamaño de las imágenes de evolución */
+    max-width: 70px; /* Reducir el tamaño de las imágenes de evolución */
   }
 
   .pokemon-evolution-chain span {
