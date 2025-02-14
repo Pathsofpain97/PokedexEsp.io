@@ -33,9 +33,17 @@
   flex-grow: 1; 
   display: flex;
   align-items: center;
+  gap: 10px; 
 }
 
-/* Estilo del botón original */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-grow: 1;
+}
+
+
 #start-search-button {
   background-color: #FF5350;
   height: 40px;
@@ -43,7 +51,6 @@
   border-radius: 10px;
   box-shadow: #ff535088 5px 5px 15px;
   color: white;
-  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,39 +63,41 @@
   box-shadow: #ff53509c 3px 3px 13px;
 }
 
-#new-search-button {
-  background-color: #FF5350;
-  height: 40px;
-  width: 40px;
-  border-radius: 10px;
-  box-shadow: #ff535088 5px 5px 15px;
-  color: white;
-  margin-left: 10px;
+
+.clear-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.3s ease, box-shadow 0.3s ease; 
-  position: absolute; 
-  right: 15px; 
 }
 
-#new-search-button:hover {
-  opacity: 0.8;
-  box-shadow: #ff53509c 3px 3px 13px;
+.clear-icon {
+  color: #999; 
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
+
+.clear-icon:hover {
+  color: #FF5350; 
+}
+
 
 #search-input {
-  border-radius: 10px 0 0 10px; 
+  border-radius: 10px; 
   border: 1px solid #ddd; 
   padding: 10px;
   font-size: 1rem;
   flex-grow: 1;
   transition: border-color 0.3s ease; 
+  width: 100%; /* Ocupa todo el ancho */
 }
 
 #search-input:focus {
   border-color: #FF5350; 
-  outline: none; /* Elimina el contorno predeterminado */
+  outline: none; 
 }
 
 /* Media query para tablets y dispositivos medianos */
@@ -110,41 +119,53 @@
     width: 100%; /* Ocupa todo el ancho */
     margin-top: 10px; /* Espacio arriba del botón */
   }
-
-  #new-search-button {
-    position: static; /* Cambia a posición estática en móviles */
-    margin-left: 0; /* Elimina el margen izquierdo */
-    width: 100%; /* Ocupa todo el ancho */
-    margin-top: 10px; /* Espacio arriba del botón */
-  }
 }
 
 /* Media query para dispositivos móviles pequeños */
 @media (max-width: 475px) {
+  /* Cambios específicos para móviles */
   #search-bar-container {
     margin: 20px 0; /* Reduce el margen superior e inferior */
     padding: 10px; /* Reduce el padding */
     gap: 0; /* Elimina el espacio entre los elementos */
   }
 
-  #search-input {
-    padding: 8px; /* Reduce el padding del input */
-    font-size: 0.8rem;
-  }
-
-  #start-search-button {
-    height: 30px; /* Reduce la altura del botón */
-    margin: 0; /* Elimina cualquier margen */
-    padding: 0; /* Elimina cualquier padding */
-  }
-
-  #new-search-button {
-    height: 30px; /* Reduce la altura del botón */
-    margin: 0; /* Elimina cualquier margen */
-    padding: 0; /* Elimina cualquier padding */
-  }
-
   .logo-container {
-    margin-bottom: 10px; /* Ajusta el margen inferior del logo */
+    text-align: center; /* Centra el logo */
+    margin-bottom: 10px; /* Espacio debajo del logo */
+  }
+
+  .search-group {
+    flex-direction: column; /* Cambia a disposición vertical en móviles */
+    gap: 10px; /* Espacio entre el input, la "X" y la lupa */
+  }
+
+  .input-wrapper {
+    width: 100%; /* Ocupa todo el ancho */
+  }
+
+
+  #search-input {
+    padding: 10px; /* Padding original */
+    font-size: 1rem; /* Tamaño de texto original */
+    border-width: 1px; /* Grosor del borde original */
+  }
+
+  /* Botón de borrar (X) */
+  .clear-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0; /* Espacio arriba y abajo de la "X" */
+  }
+
+  .clear-icon {
+    font-size: 1.3rem; /* Hacemos la "X" más grande */
+  }
+
+  /* Botón de búsqueda (Lupa) */
+  #start-search-button {
+    width: 100%; /* Ocupa todo el ancho en móviles */
+    height: 30px; /* Reduce la altura del botón */
   }
 }
