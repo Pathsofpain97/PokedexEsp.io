@@ -200,10 +200,6 @@
     max-height: 80px; /* Reducir la altura máxima del texto */
   }
 
-  .pokemon-evolution-chain img {
-    max-width: 70px; /* Reducir el tamaño de las imágenes de evolución */
-  }
-
   .pokemon-evolution-chain span {
     font-size: 0.9rem; /* Reducir el tamaño de la fuente del nivel de evolución */
   }
